@@ -1,0 +1,108 @@
+.form {
+    $self: &;
+  
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+    &__row {
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+  
+      &-error {
+        display: none;
+        color: red;
+        text-align: center;
+        margin-bottom: 15px;
+  
+        #{$self}.error & {
+          display: flex;
+        }
+      }
+    }
+  
+    &__field {
+      display: flex;
+      flex: 1 1 100%;
+    }
+  
+    &__input {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0, .4);
+      padding: 10px;
+      outline: none;
+  
+      &:focus {
+        border-color: #DBA9A1;
+      }
+  
+      &.error {
+        border-color: red;
+      }
+    }
+  
+    &__radio-group {
+      display: flex;
+      flex-flow: row nowrap;
+      padding: 0;
+      border: 1px solid rgba(0,0,0, .4);
+      border-radius: 6px;
+    }
+  
+    &__radio {
+      $self: &;
+  
+      position: relative;
+  
+      & + & {
+        border-left: 1px solid rgba(0,0,0, .4);
+      }
+  
+      &-input {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+      }
+  
+      &-label {
+        cursor: pointer;
+        padding: 10px 15px;
+        display: block;
+        background-color: transparent;
+  
+        #{$self}:nth-child(1) & {
+          border-radius: 6px 0 0 6px;
+        }
+  
+        #{$self}:nth-child(2) & {
+          border-radius: 0 6px 6px 0;
+        }
+  
+        #{$self}-input:checked + &  {
+          background-color: #D6BBC0;
+        }
+      }
+    }
+  
+    &__button {
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      padding: 0 60px;
+      height: 45px;
+      outline: none;
+    }
+  
+  }
+  

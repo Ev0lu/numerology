@@ -1,0 +1,42 @@
+.header {
+    
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    background-size: cover;
+    flex: 0 0 auto;
+  
+    &__wrap {
+      padding-top: 40px;
+      padding-bottom: 95px;
+    }
+  
+    &__logo {
+      margin-bottom: 50px;
+  
+      &-link {
+        font-size: 60px;
+        letter-spacing: 6px;
+        color: #3e3c3c;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+  
+    &__title {
+      font-weight: 500;
+      font-size: 34px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+  
+      &-h4 {
+        line-height: 32px;
+        font-size: 27px;
+        font-weight: 400;
+        max-width: 620px;
+        margin-bottom: 0;
+      }
+    }
+  
+  
+  }
+  

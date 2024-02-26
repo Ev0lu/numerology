@@ -1,0 +1,44 @@
+.footer {
+    flex: 0 0 auto;
+    background-color: #7ea887;
+  
+    &__wrap {
+      padding-top: 75px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  
+    &__title {
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 34px;
+      max-width: 550px;
+      margin-bottom: 70px;
+      color: #ffffff;
+    }
+  
+    &__buttons {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 15px;
+    }
+  
+    &__button {
+      position: relative;
+      width: 50px;
+  
+      &:first-child:before {
+        content: "";
+        background-size: contain;
+        position: absolute;
+        width: 45px;
+        height: 100px;
+        display: block;
+        left: -75px;
+        top: -15px;
+      }
+    }
+  }
