@@ -806,6 +806,16 @@ img {
     padding: 45px 20px;
     margin: 0 auto
 }
+.wrap_footer{
+    max-width: 1200px;
+    width: 100%;
+    padding: 15px 20px 25px;
+    margin: 0 auto
+}
+
+.form{
+    margin-top: 35px;
+}
 
 .button {
     background-color: #d6bbc0;
@@ -1302,7 +1312,7 @@ img {
     font-weight: 300;
     line-height: 20px;
     max-width: 550px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #fff
 }
 
@@ -1363,7 +1373,7 @@ img {
     font-weight: 500;
     font-size: 24px;
     text-transform: uppercase;
-    margin-bottom: 20px
+    margin-bottom: 0px
 }
 
 .header__title-h4 {
@@ -1378,8 +1388,10 @@ img {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    background:linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)), url(../img/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yOTQtYXVtLTA4YV8xXzEuanBn.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+
     /*background-position: center;*/
 }
+
+.text-content p{
+    margin-bottom:10px;
+    }
