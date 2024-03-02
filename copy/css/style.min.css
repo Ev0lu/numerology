@@ -809,7 +809,7 @@ img {
 .wrap_footer{
     max-width: 1200px;
     width: 100%;
-    padding: 15px 20px 25px;
+    padding: 25px 20px 25px;
     margin: 0 auto
 }
 
@@ -818,12 +818,12 @@ img {
 }
 
 .button {
-    background-color: #d6bbc0;
+    background-color: #ac6d90;
     border-radius: 10px;
     -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
     box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
     padding: 20px 60px;
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
     -webkit-transition: .3s;
     transition: .3s;
@@ -958,7 +958,8 @@ img {
 }
 
 .form__radio-input:checked+.form__radio-label {
-    background-color: #d6bbc0
+    /*background-color: #d6bbc0*/
+    background-color: #ac6d90
 }
 
 .form__button {
@@ -1284,12 +1285,12 @@ img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    background-color: #741570fe;
+    background-color: #301e2cfe;
     
 }
 
 .footer__wrap {
-    padding-top: 40px;
+    padding-top: 25px;
 
     text-align: center;
     display: -webkit-box;
@@ -1298,28 +1299,39 @@ img {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
+
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
+    justify-content: center;
+    
     align-items: center
+}
+
+.footer_title_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer__title {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 20px;
     max-width: 550px;
-    margin-bottom: 30px;
-    color: #fff
+    margin-bottom: 6px;
+    margin-right: 20px;
+  
+    color: #ac9e9e
 }
 
 .footer__buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
+    justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-flow: row nowrap;
@@ -1332,15 +1344,7 @@ img {
     width: 30px
 }
 
-.footer__button:first-child:before {
-    content: "";
-    position: absolute;
-    width: 45px;
-    height: 50px;
-    display: block;
-    left: -75px;
-    top: -15px
-}
+
 
 .header {
     background-image: url(../img/);
@@ -1364,7 +1368,8 @@ img {
 .header__logo-link {
     font-size: 50px;
     letter-spacing: 6px;
-    color: #3e3c3c;
+    /*color: #3e3c3c;*/
+    color: #b6769a;
     font-weight: 400;
     text-decoration: none
 }
@@ -1374,6 +1379,7 @@ img {
     font-size: 24px;
     text-transform: uppercase;
     margin-bottom: 0px
+    
 }
 
 .header__title-h4 {
@@ -1391,3 +1397,7 @@ img {
 
     /*background-position: center;*/
 }
+
+.text-content p{
+    margin-bottom:10px;
+    }
