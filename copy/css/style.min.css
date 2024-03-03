@@ -1064,6 +1064,13 @@ img {
     margin-bottom: 25px
 }
 
+.result-info_first {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    margin-bottom: 25px
+}
+
 .result-info__title {
     font-size: 32px;
     font-weight: 500;
@@ -1227,7 +1234,7 @@ img {
 
 @media(min-width: 992px) {
     .result-table__tooltip:hover .result-table__tooltip-modal {
-        display:block
+        display: block;
     }
 }
 

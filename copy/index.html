@@ -8,9 +8,12 @@
         
         <link rel="stylesheet" href="css/style.min.css?v1.0.18">
         <title>Калькулятор матрицы судьбы</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     </head>
     <body>
-
+        
         <div class="wrapper">
             <header class="header">
                 <div class="wrap header__wrap">
@@ -56,7 +59,28 @@
                         </form>
                     </div>
                 </div>
+                <div class="result_overWrapper">
                 <div class="result">
+                    
+                    <div class="result__matrix-content">
+                        <div class="result-info_first">
+                            <h2 class="result-info__title">Ваша матрица судьбы
+    </h2>
+                            <div class="result-info__items">
+                                <div class="result-info__item result-info__item--name">
+                                    <div class="result-info__item-content"></div>
+                                </div>
+                                <div class="result-info__item result-info__item--date">
+                                    <div class="result-info__item-description">Дата рождения:</div>
+                                    <div class="result-info__item-content"></div>
+                                </div>
+                                <div class="result-info__item result-info__item--age">
+                                    <div class="result-info__item-description">Возраст:</div>
+                                    <div class="result-info__item-content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="result__matrix">
                         <div class="wrap result__matrix-wrap" id="result-anchor">
                             <div class="result__matrix-image">
@@ -93,8 +117,8 @@
                                         <text fill="#FAF8F6" font-family="Inter" font-size="15.256" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
                                             <tspan class="chakra12 fizik4" x="314" y="302" dominant-baseline="middle" text-anchor="middle">0</tspan>
                                         </text>
-                                        <path d="m412.35 381.5c0 5.41-4.386 9.795-9.795 9.795-5.41 0-9.795-4.385-9.795-9.795 0-5.409 4.385-9.795 9.795-9.795 5.409 0 9.795 4.386 9.795 9.795z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.4691"/>
-                                        <path d="m428.59 397.8c0 5.41-4.385 9.795-9.795 9.795s-9.795-4.385-9.795-9.795 4.385-9.795 9.795-9.795 9.795 4.385 9.795 9.795z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.4691"/>
+                                        <path d="m373.35 418.5c0 5.41-4.386 9.795-9.795 9.795-5.41 0-9.795-4.385-9.795-9.795 0-5.409 4.385-9.795 9.795-9.795 5.409 0 9.795 4.386 9.795 9.795z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.4691"/>
+                                        <path d="m412.35 381.5c0 5.41-4.385 9.795-9.795 9.795s-9.795-4.385-9.795-9.795 4.385-9.795 9.795-9.795 9.795 4.385 9.795 9.795z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.4691"/>
                                         <path d="m253.59 220.8c0 5.41-4.385 9.795-9.795 9.795s-9.795-4.385-9.795-9.795 4.385-9.795 9.795-9.795 9.795 4.385 9.795 9.795z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.4691"/>
                                         <text fill="#0A1935" font-family="Inter" font-size="13.915" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
                                             <tspan class="chakra22" x="315" y="222" dominant-baseline="middle" text-anchor="middle">0</tspan>
@@ -155,10 +179,10 @@
                                             <tspan class="chakra7 big2" x="617" y="136" dominant-baseline="middle" text-anchor="middle">0</tspan>
                                         </text>
                                         <text fill="#0A1935" font-family="Inter" font-size="13.915" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
-                                            <tspan class="chakra20" x="490" y="400" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                            <tspan class="chakra20" x="474.5" y="383" dominant-baseline="middle" text-anchor="middle">0</tspan>
                                         </text>
                                         <text fill="#0A1935" font-family="Inter" font-size="13.915" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
-                                            <tspan class="chakra21" x="473" y="383" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                            <tspan class="chakra21" x="435" y="420" dominant-baseline="middle" text-anchor="middle">0</tspan>
                                         </text>
                                         <text fill="#000000" font-family="Inter" font-size="15.256" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
                                             <tspan class="chakra18" x="401" y="462" dominant-baseline="middle" text-anchor="middle">0</tspan>
@@ -267,6 +291,7 @@
                                         <path d="m62.964 335.48c-0.4031-0.973-1.5186-1.436-2.4917-1.032-0.973 0.403-1.4351 1.518-1.0321 2.491 0.4031 0.973 1.5187 1.435 2.4917 1.032 0.9731-0.403 1.4352-1.518 1.0321-2.491z" fill="white"/>
                                         <path d="m114.32 141.48c0.403-0.973-0.059-2.089-1.032-2.492s-2.089 0.059-2.492 1.032 0.059 2.089 1.032 2.492 2.089-0.059 2.492-1.032z" fill="white"/>
                                         <path d="m287.8 40.623c0.973-0.403 1.435-1.5186 1.032-2.4917-0.403-0.973-1.518-1.4351-2.491-1.0321-0.973 0.4031-1.435 1.5187-1.032 2.4917 0.403 0.9731 1.518 1.4352 2.491 1.0321z" fill="white"/>
+                                        
                                         <text fill="white" font-family="Inter" font-size="11.442" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
                                             <tspan class="outside1" x="354.768" y="29.0399" data-item="1"/>
                                         </text>
@@ -603,12 +628,9 @@
                                         <text fill="white" font-family="Inter" font-size="11.442" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
                                             <tspan class="outside5" x="289.02" y="579.011" data-item="1"/>
                                         </text>
-                                        <path transform="translate(-88 117)" d="m447.54 316.91c-0.357-3.943-2.324-5.922-2.324-5.922l-3.576-4.768h-4.767l-3.575 4.768s-0.846 0.854-1.53 2.547c-1.186 0.394-2.046 1.499-2.046 2.817 0 0.862 0.372 1.633 0.959 2.178-0.225 0.418-0.363 0.889-0.363 1.397 0 1.167 0.677 2.167 1.654 2.656 0.764 1.145 1.786 1.516 2.517 1.516h9.536c0.821 0 2.01-0.464 2.787-1.973 1.151-0.412 1.981-1.502 1.981-2.795 0-1-0.498-1.88-1.253-2.421zm-8.283-10.69c0.328 0 0.631-0.094 0.894-0.247 0.264 0.153 0.567 0.247 0.894 0.247 0.987 0 2.384-1.397 2.384-2.383 0 0 0-1.193-1.192-1.193-0.47 0-0.597 0.596-1.192 0.596-0.596 0-0.596-0.596-1.788-0.596s-1.192 0.596-1.788 0.596-0.722-0.596-1.192-0.596c-1.192 0-1.192 1.193-1.192 1.193 0 0.986 1.398 2.383 2.384 2.383 0.327 0 0.63-0.094 0.894-0.247 0.264 0.153 0.566 0.247 0.894 0.247z" fill="#FDD888"/>
-                                        <path transform="translate(-88 117)" d="m442.84 306.22c0 0.329-0.267 0.596-0.596 0.596h-5.96c-0.329 0-0.596-0.267-0.596-0.596s0.267-0.596 0.596-0.596h5.96c0.329 0 0.596 0.267 0.596 0.596z" fill="#BF6952"/>
-                                        <path transform="translate(-88 117)" d="m442.78 317.27c0-2.668-5.115-2.494-5.115-4.103 0-0.78 0.776-1.161 1.676-1.161 1.512 0 1.782 0.936 2.467 0.936 0.484 0 0.718-0.294 0.718-0.624 0-0.766-1.207-1.345-2.363-1.545v-0.738c0-0.461-0.388-0.835-0.866-0.835-0.481 0-0.869 0.374-0.869 0.835v0.764c-1.261 0.276-2.346 1.117-2.346 2.488 0 2.562 5.113 2.459 5.113 4.258 0 0.625-0.702 1.248-1.854 1.248-1.729 0-2.305-1.126-3.006-1.126-0.343 0-0.648 0.277-0.648 0.694 0 0.663 1.155 1.46 2.743 1.683l-1e-3 6e-3v0.833c0 0.46 0.389 0.835 0.868 0.835s0.867-0.375 0.867-0.835v-0.833c0-0.011-5e-3 -0.018-5e-3 -0.027 1.429-0.257 2.621-1.152 2.621-2.753z" fill="#2CCA28"/>
-                                        <path transform="translate(28 31)" d="m375.83 388.19c0-3.565-2.827-6.455-6.313-6.455-2.116 0-3.984 1.069-5.129 2.701-1.146-1.632-3.013-2.701-5.13-2.701-3.486 0-6.313 2.889-6.313 6.455 0 0.505 0.063 0.995 0.17 1.466 0.877 5.569 6.932 11.444 11.273 13.057 4.34-1.613 10.395-7.489 11.271-13.056 0.108-0.472 0.171-0.961 0.171-1.467z" fill="#F4ABBA"/>
-                                        <path transform="translate(28 31)" d="m372.98 389.2c0-2.676-2.12-4.845-4.737-4.845-1.588 0-2.99 0.801-3.85 2.028-0.86-1.227-2.262-2.028-3.85-2.028-2.616 0-4.738 2.169-4.738 4.845 0 0.379 0.047 0.746 0.128 1.1 0.657 4.179 5.202 8.589 8.46 9.799 3.257-1.21 7.801-5.62 8.459-9.799 0.082-0.354 0.128-0.721 0.128-1.1z" fill="#EA596E"/>
-                                        <path transform="translate(28 31)" d="m370.27 390.15c0-1.832-1.452-3.319-3.244-3.319-1.088 0-2.047 0.549-2.636 1.389-0.589-0.84-1.549-1.389-2.637-1.389-1.791 0-3.244 1.487-3.244 3.319 0 0.259 0.031 0.51 0.086 0.752 0.451 2.863 3.563 5.882 5.794 6.711 2.23-0.83 5.343-3.849 5.793-6.711 0.057-0.242 0.088-0.494 0.088-0.752z" fill="#DD2E44"/>
+                                        <path transform="translate(-70 90)" d="m505.54 233.91c-0.357-3.943-2.324-5.922-2.324-5.922l-3.576-4.768h-4.767l-3.575 4.768s-0.846 0.854-1.53 2.547c-1.186 0.394-2.046 1.499-2.046 2.817 0 0.862 0.372 1.633 0.959 2.178-0.225 0.418-0.363 0.889-0.363 1.397 0 1.167 0.677 2.167 1.654 2.656 0.764 1.145 1.786 1.516 2.517 1.516h9.536c0.821 0 2.01-0.464 2.787-1.973 1.151-0.412 1.981-1.502 1.981-2.795 0-1-0.498-1.88-1.253-2.421zm-8.283-10.69c0.328 0 0.631-0.094 0.894-0.247 0.264 0.153 0.567 0.247 0.894 0.247 0.987 0 2.384-1.397 2.384-2.383 0 0 0-1.193-1.192-1.193-0.47 0-0.597 0.596-1.192 0.596-0.596 0-0.596-0.596-1.788-0.596s-1.192 0.596-1.788 0.596-0.722-0.596-1.192-0.596c-1.192 0-1.192 1.193-1.192 1.193 0 0.986 1.398 2.383 2.384 2.383 0.327 0 0.63-0.094 0.894-0.247 0.264 0.153 0.566 0.247 0.894 0.247z" fill="#FDD888"/>
+                                        <path transform="translate(-70 90)" d="m500.78 234.27c0-2.668-5.115-2.494-5.115-4.103 0-0.78 0.776-1.161 1.676-1.161 1.512 0 1.782 0.936 2.467 0.936 0.484 0 0.718-0.294 0.718-0.624 0-0.766-1.207-1.345-2.363-1.545v-0.738c0-0.461-0.388-0.835-0.866-0.835-0.481 0-0.869 0.374-0.869 0.835v0.764c-1.261 0.276-2.346 1.117-2.346 2.488 0 2.562 5.113 2.459 5.113 4.258 0 0.625-0.702 1.248-1.854 1.248-1.729 0-2.305-1.126-3.006-1.126-0.343 0-0.648 0.277-0.648 0.694 0 0.663 1.155 1.46 2.743 1.683l-1e-3 6e-3v0.833c0 0.46 0.389 0.835 0.868 0.835s0.867-0.375 0.867-0.835v-0.833c0-0.011-5e-3 -0.018-5e-3 -0.027 1.429-0.257 2.621-1.152 2.621-2.753z" fill="#2CCA28"/>
+                                        <path transform="translate(28 31)" d="m346.83 355.19c0-3.565-2.827-6.455-6.313-6.455-2.116 0-3.984 1.069-5.129 2.701-1.146-1.632-3.013-2.701-5.13-2.701-3.486 0-6.313 2.889-6.313 6.455 0 0.505 0.063 0.995 0.17 1.466 0.877 5.569 6.932 11.444 11.273 13.057 4.34-1.613 10.395-7.489 11.271-13.056 0.108-0.472 0.171-0.961 0.171-1.467z" fill="#DC143C"/>
                                         <text transform="translate(335.58 263.1) rotate(-45)" fill="white" font-family="Arial" font-size="13.926" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
                                             <tspan x="0" y="12.8278">Женский род</tspan>
                                         </text>
@@ -621,6 +643,53 @@
                                         </text>
                                         <path d="m362.06 260.81 26.172-26.005" stroke="#EA596E" stroke-width="1.9196"/>
                                         <path d="m265.58 243.48 19.919 19.919" stroke="#5970EA" stroke-width="1.9196"/>
+                                        
+                                        <!--10 лет круги-->
+                                        <path d="m184.17 181.75c10.111 0 18.308-8.197 18.308-18.308s-8.197-18.308-18.308-18.308-18.307 8.197-18.307 18.308 8.196 18.308 18.307 18.308z" fill="#ffffff" stroke-width="1.7"></path>
+                                        <path d="m207.7 198.52c7.373 0 13.35-5.976 13.35-13.349s-5.977-13.349-13.35-13.349c-7.372 0-13.349 5.976-13.349 13.349s5.977 13.349 13.349 13.349z" fill="#ffffff"></path>
+                                        <!--70 лет круги-->
+                                        <path d="m185.17 455.75c10.111 0 18.308-8.197 18.308-18.308s-8.197-18.308-18.308-18.308-18.307 8.197-18.307 18.308 8.196 18.308 18.307 18.308z" fill="#ffffff" stroke-width="1.7"></path>
+                                        <path d="m208.7 428.52c7.373 0 13.35-5.976 13.35-13.349s-5.977-13.349-13.35-13.349c-7.372 0-13.349 5.976-13.349 13.349s5.977 13.349 13.349 13.349z" fill="#ffffff"></path>
+                                        <!--30 лет круги-->
+                                        <path d="m460.17 180.75c10.111 0 18.308-8.197 18.308-18.308s-8.197-18.308-18.308-18.308-18.307 8.197-18.307 18.308 8.196 18.308 18.307 18.308z" fill="#ffffff" stroke-width="1.7"></path>
+                                        <path d="m437.7 198.52c7.373 0 13.35-5.976 13.35-13.349s-5.977-13.349-13.35-13.349c-7.372 0-13.349 5.976-13.349 13.349s5.977 13.349 13.349 13.349z" fill="#ffffff"></path>
+                                        <!--50 лет круги-->
+                                        <path d="m460.17 455.75c10.111 0 18.308-8.197 18.308-18.308s-8.197-18.308-18.308-18.308-18.307 8.197-18.307 18.308 8.196 18.308 18.307 18.308z" fill="#ffffff" stroke-width="1.7"></path>
+                                        <path d="m435.7 428.52c7.373 0 13.35-5.976 13.35-13.349s-5.977-13.349-13.35-13.349c-7.372 0-13.349 5.976-13.349 13.349s5.977 13.349 13.349 13.349z" fill="#ffffff"></path>
+                                        <!--круг энергии денег-->
+                                        <path d="m448.35 343.5c0 5.41-4.385 9.795-9.795 9.795s-9.795-4.385-9.795-9.795 4.385-9.795 9.795-9.795 9.795 4.385 9.795 9.795z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.4691"/>
+                                        <!--круг справа от центрального-->
+                                        <!--<path d="m368.32 318.67c10.111 0 18.308-8.196 18.308-18.307 0-10.112-8.197-18.308-18.308-18.308s-18.307 8.196-18.307 18.308c0 10.111 8.196 18.307 18.307 18.307z" fill="#ffffff" stroke-width="1.5256"/>-->
+                                        <!--Значения новых энергий-->
+                                        <text fill="#0A1935" font-family="Inter" font-size="19.071" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="leftUp1" x="282" y="165" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>
+                                        <text fill="#0A1935" font-family="Inter" font-size="15.256" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="leftUp2" x="286" y="187" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>
+                                        <text fill="#0A1935" font-family="Inter" font-size="19.071" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="leftDown1" x="283" y="440" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>
+                                        <text fill="#0A1935" font-family="Inter" font-size="15.256" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="leftDown2" x="287" y="417" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>
+                                        <text fill="#0A1935" font-family="Inter" font-size="19.071" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="rightUp1" x="558" y="165" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text><text fill="#0A1935" font-family="Inter" font-size="15.256" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="rightUp2" x="516" y="187" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>
+                                        <text fill="#0A1935" font-family="Inter" font-size="19.071" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="rightDown1" x="558" y="440" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>
+                                        <text fill="#0A1935" font-family="Inter" font-size="15.256" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="rightDown2" x="514" y="417" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>
+                                      <!--  <text fill="#0A1935" font-family="Inter" font-size="19.071" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="rightCenter" x="466" y="303" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>-->
+                                        <text fill="#0A1935" font-family="Inter" font-size="15.256" letter-spacing="0em" style="white-space:pre" xml:space="preserve">
+                                            <tspan class="money" x="517" y="345" dominant-baseline="middle" text-anchor="middle">0</tspan>
+                                        </text>
                                     </g>
                                 </svg>
                             </div>
@@ -629,14 +698,14 @@
                                     <h2 class="result-info__title">Ваша матрица судьбы
             </h2>
                                     <div class="result-info__items">
-                                        <div class="result-info__item result-info__item--name">
+                                        <div class="result-info__item result-info__item--name_one">
                                             <div class="result-info__item-content"></div>
                                         </div>
-                                        <div class="result-info__item result-info__item--date">
+                                        <div class="result-info__item result-info__item--date_one">
                                             <div class="result-info__item-description">Дата рождения:</div>
                                             <div class="result-info__item-content"></div>
                                         </div>
-                                        <div class="result-info__item result-info__item--age">
+                                        <div class="result-info__item result-info__item--age_one">
                                             <div class="result-info__item-description">Возраст:</div>
                                             <div class="result-info__item-content"></div>
                                         </div>
@@ -823,15 +892,15 @@
                                             <g clip-path="url(#clip0_0_3)">
                                                 <path d="M80 130.2C88.3947 130.2 95.2 123.395 95.2 115C95.2 106.605 88.3947 99.8 80 99.8C71.6053 99.8 64.8 106.605 64.8 115C64.8 123.395 71.6053 130.2 80 130.2Z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.6"/>
                                                 <text fill="#0A1935" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="14" font-weight="bold" letter-spacing="0em">
-                                                    <tspan x="175" y="117" class="earth" id="spirits6" text-anchor="middle" dominant-baseline="middle"></tspan>
+                                                    <tspan x="175" y="117" class="earth" text-anchor="middle" dominant-baseline="middle"></tspan>
                                                 </text>
                                                 <path d="M80 65.2C88.3947 65.2 95.2 58.3947 95.2 50C95.2 41.6053 88.3947 34.8 80 34.8C71.6053 34.8 64.8 41.6053 64.8 50C64.8 58.3947 71.6053 65.2 80 65.2Z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.6"/>
                                                 <path d="M154 97.7C162.395 97.7 169.2 90.8947 169.2 82.5C169.2 74.1053 162.395 67.3 154 67.3C145.605 67.3 138.8 74.1053 138.8 82.5C138.8 90.8947 145.605 97.7 154 97.7Z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.6"/>
                                                 <text fill="#0A1935" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="14" font-weight="bold" letter-spacing="0em">
-                                                    <tspan x="175" y="51" class="sky" id="spirits7"  text-anchor="middle" dominant-baseline="middle"></tspan>
+                                                    <tspan x="175" y="51" class="sky" text-anchor="middle" dominant-baseline="middle"></tspan>
                                                 </text>
                                                 <text fill="#0A1935" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="14" font-weight="bold" letter-spacing="0em">
-                                                    <tspan x="249" y="84"  id="spirits5" class="personal-destiny" text-anchor="middle" dominant-baseline="middle"></tspan>
+                                                    <tspan x="249" y="84" class="personal-destiny" text-anchor="middle" dominant-baseline="middle"></tspan>
                                                 </text>
                                                 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="20" letter-spacing="0em">
                                                     <tspan x="0" y="53.4336">&#x41d;&#x435;&#x431;&#x43e;</tspan>
@@ -866,15 +935,15 @@
                                             <g clip-path="url(#clip0_0_1)">
                                                 <path d="M80 130.2C88.3947 130.2 95.2 123.395 95.2 115C95.2 106.605 88.3947 99.8 80 99.8C71.6053 99.8 64.8 106.605 64.8 115C64.8 123.395 71.6053 130.2 80 130.2Z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.6"/>
                                                 <text fill="#0A1935" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="14" font-weight="bold" letter-spacing="0em">
-                                                    <tspan x="175" y="116.5" id="spirits3" class="female" text-anchor="middle" dominant-baseline="middle"></tspan>
+                                                    <tspan x="175" y="116.5" class="female" text-anchor="middle" dominant-baseline="middle"></tspan>
                                                 </text>
                                                 <path d="M80 65.2C88.3947 65.2 95.2 58.3947 95.2 50C95.2 41.6053 88.3947 34.8 80 34.8C71.6053 34.8 64.8 41.6053 64.8 50C64.8 58.3947 71.6053 65.2 80 65.2Z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.6"/>
                                                 <path d="M154 97.7C162.395 97.7 169.2 90.8947 169.2 82.5C169.2 74.1053 162.395 67.3 154 67.3C145.605 67.3 138.8 74.1053 138.8 82.5C138.8 90.8947 145.605 97.7 154 97.7Z" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.6"/>
                                                 <text fill="#0A1935" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="14" font-weight="bold" letter-spacing="0em">
-                                                    <tspan x="175" y="51" class="male" id="spirits4" text-anchor="middle" dominant-baseline="middle"></tspan>
+                                                    <tspan x="175" y="51" class="male" text-anchor="middle" dominant-baseline="middle"></tspan>
                                                 </text>
                                                 <text fill="#0A1935" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="14" font-weight="bold" letter-spacing="0em">
-                                                    <tspan x="249" y="84" id="spirits2" class="social-destiny" text-anchor="middle" dominant-baseline="middle"></tspan>
+                                                    <tspan x="249" y="84" class="social-destiny" text-anchor="middle" dominant-baseline="middle"></tspan>
                                                 </text>
                                                 <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="20" letter-spacing="0em">
                                                     <tspan x="2" y="57.4336">&#x41c;</tspan>
@@ -887,7 +956,6 @@
                                                 <path d="M95.908 50H115.433" stroke="white"/>
                                                 <path d="M138.402 82.5H115.049" stroke="white"/>
                                             </g>
-
                                             <defs>
                                                 <clipPath id="clip0_0_1">
                                                     <rect width="207" height="150" fill="white"/>
@@ -926,7 +994,7 @@
                                             <circle cx="80" cy="50" r="15.200000" fill="#FAF8F6" stroke="#0A1935" stroke-width="1.6"></circle>
                                             <text text-anchor="middle" fill="#0A1935" xml:space="preserve" font-family="Arial" font-size="14" font-weight="600" letter-spacing="-0.2px" style="white-space: pre;"></text>
                                             <text text-anchor="middle" fill="#0A1935" xml:space="preserve" font-family="Arial" font-size="14" font-weight="600" letter-spacing="-0.2px" style="white-space: pre;">
-                                                <tspan x="163" y="54.5" id="spiritss1" class="planet-destiny"></tspan>
+                                                <tspan x="163" y="54.5" id="spiritss" class="planet-destiny"></tspan>
                                             </text>
                                         </svg>
                                     </div>
@@ -940,11 +1008,10 @@
                                       height: 100vh;
                                       margin: 0;
                                     }*/
-                                    
-
+                                
                                     .container {
-                                      margin-right: 25%;
-                                      margin-left: 25%;
+                                      margin-right: 15%;
+                                      margin-left: 15%;
                                       width: 100%;
                                       text-align: center;
                                       display: flex;
@@ -1006,7 +1073,26 @@
                                     .footer__title{
                                         font-size: 20px;
                                     }
+                                    @media(min-width: 1168px) {
+                                        .result-info_first{
+                                            display: none;
+                                        }
+                                        
+                                    
+                                        }
+
+                                    @media(max-width: 1167px) {
+                                        .result-info{
+                                            display: none;
+                                        }
+                                    }
+
+                             
+
                                     @media(max-width: 420px) {
+                                       
+                                        
+
                                         .header__logo-link {
                                             font-size: 40px;
                                         }
@@ -1032,9 +1118,9 @@
                                             font-size: 16px;
                                         }
                                         .text-content p{
-                                            width: 135%;
+                                            width: 115%;
                                         }
-                                       
+                                        
                                     }
                                     @media(max-width: 360px) {
                                         .header__logo-link {
@@ -1067,14 +1153,12 @@
                                         background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url(../img/8320690.jpg);
                                         background-repeat: no-repeat;
                                         background-size: cover;
-
-                                        
                                     }
                                    
                                    
 
                                   </style>
-
+                                   
                                 
                                    <div class="container">
                                     <div class="menu-item" onclick="toggleText(1)">Личные качества</div>
@@ -1167,6 +1251,8 @@
                                       </div>
                                     </div>
                                     <script>
+                                        
+
                                         let openButtons = [];
                                         setTimeout(() => {  console.log(document.getElementsByClassName('chakra4')[0].textContent); }, 5000);
                                         function toggleText(index) {
@@ -1216,6 +1302,8 @@
                                           // тут крч та штука которая появляется, у нее display: none, а если класс active - display: block ставим
                                           textContent.classList.toggle('active', openButtons.includes(index));
                                         }
+
+                                        
 
                                         //Сделано
                                         let relationship1 = function() {
@@ -2863,31 +2951,248 @@
                                             }  
                                             }
                                         }
-                                                                            // Create a MediaQueryList object
-                                    var x = window.matchMedia("(max-width: 420px)")
-                                    function myFunction() {
-                                            if (x.matches) { // If media query matches
-                                                document.getElementById("spiritss").setAttribute("x", "153");
-                                                document.getElementById("spiritss1").setAttribute("x", "153");
-                                                document.getElementById("spirits2").setAttribute("x", "239");
-                                                document.getElementById("spirits3").setAttribute("x", "165");
-                                                document.getElementById("spirits4").setAttribute("x", "165");
-                                                document.getElementById("spirits5").setAttribute("x", "239");
-                                                document.getElementById("spirits6").setAttribute("x", "165");
-                                                document.getElementById("spirits7").setAttribute("x", "165");
-                                            } else {
-                                                document.getElementById("spiritss").setAttribute("x", "163");
-                                                document.getElementById("spiritss1").setAttribute("x", "163");
-                                                document.getElementById("spirits2").setAttribute("x", "249");
-                                                document.getElementById("spirits3").setAttribute("x", "175");
-                                                document.getElementById("spirits4").setAttribute("x", "175");
-                                                document.getElementById("spirits5").setAttribute("x", "249");
-                                                document.getElementById("spirits6").setAttribute("x", "175");
-                                                document.getElementById("spirits7").setAttribute("x", "175");
+
+
+                                        
+                                        
+                                        let money_stream = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('money')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('money')[0].textContent = Number(document.getElementsByClassName('chakra16')[0].textContent) + Number(document.getElementsByClassName('chakra20')[0].textContent)
+                                                }
                                             }
-                                        }
+                                         }
+
+                                        let leftUp2 = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('leftUp2')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('leftUp2')[0].textContent = Number(document.getElementsByClassName('chakra6')[0].textContent) + Number(document.getElementsByClassName('chakra5')[0].textContent)
+                                                }
+                                            }
+                                         }
+
+                                         
+                                        let leftUp1 = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('leftUp1')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('leftUp1')[0].textContent = Number(document.getElementsByClassName('chakra6')[0].textContent) + Number(document.getElementsByClassName('leftUp2')[0].textContent)
+                                                }
+                                            }
+                                         }
+
+
+                                        let rightDown2 = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('rightDown2')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('rightDown2')[0].textContent = Number(document.getElementsByClassName('chakra8')[0].textContent) + Number(document.getElementsByClassName('chakra5')[0].textContent)
+                                                }
+                                            }
+                                         }
+
+                                         let rightDown1 = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('rightDown1')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('rightDown1')[0].textContent = Number(document.getElementsByClassName('rightDown2')[0].textContent) + Number(document.getElementsByClassName('chakra8')[0].textContent)
+                                                }
+                                            }
+                                         }
+
+                                         let leftDown2 = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('leftDown2')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('leftDown2')[0].textContent = Number(document.getElementsByClassName('chakra5')[0].textContent) + Number(document.getElementsByClassName('chakra9')[0].textContent)
+                                                }
+                                            }
+                                         }
+
+                                         
+                                         let leftDown1 = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('leftDown1')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('leftDown1')[0].textContent = Number(document.getElementsByClassName('leftDown2')[0].textContent) + Number(document.getElementsByClassName('chakra9')[0].textContent)
+                                                }
+                                            }
+                                         }
+
+                                         let rightUp2 = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('rightUp2')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('rightUp2')[0].textContent = Number(document.getElementsByClassName('chakra7')[0].textContent) + Number(document.getElementsByClassName('chakra5')[0].textContent)
+                                                }
+                                            }
+                                         }
+
+                                         let rightUp1 = function(dima,eblan) {
+                                                if ((Number(dima) + Number(eblan)) != 0) {
+                                                    
+                                                    if ((Number(dima) + Number(eblan)) > 22 ){
+                                                    x = Number(dima) + Number(eblan)
+                                                    
+                                                    let result = String(x).split('').map((item, index, array) => {
+                                                        if (index < array.length - 1) {
+                                                            return Number(item[index]) + Number(array[index + 1]);
+                                                            
+                                                        }
+                                                        return Number(item);
+                                                        
+                                                    });
+                                                    
+                                                    return document.getElementsByClassName('rightUp1')[0].textContent = result[0]
+                                                } else {
+                                                    document.getElementsByClassName('rightUp1')[0].textContent = Number(document.getElementsByClassName('rightUp2')[0].textContent) + Number(document.getElementsByClassName('chakra7')[0].textContent)
+                                                }
+                                            }
+                                         }
 
                                         setInterval(function() {
+                                            let dima = document.getElementsByClassName('chakra16')[0].textContent
+                                            let eblan = document.getElementsByClassName('chakra20')[0].textContent
+                                            let dima2 = document.getElementsByClassName('chakra6')[0].textContent
+                                            let eblan2 = document.getElementsByClassName('chakra5')[0].textContent
+                                            let dima3 = document.getElementsByClassName('chakra6')[0].textContent
+                                            let eblan3 = document.getElementsByClassName('leftUp2')[0].textContent
+                                            let eblan4 = document.getElementsByClassName('rightDown2')[0].textContent
+                                            let eblan5 = document.getElementsByClassName('leftDown2')[0].textContent
+                                            let eblan6 = document.getElementsByClassName('rightUp2')[0].textContent
+                                            let chakra_num_1 = document.getElementsByClassName('chakra1')[0].textContent
+                                            let chakra_num_2 = document.getElementsByClassName('chakra2')[0].textContent
+                                            let chakra_num_3 = document.getElementsByClassName('chakra3')[0].textContent
+                                            let chakra_num_4 = document.getElementsByClassName('chakra4')[0].textContent
+                                            let chakra_num_5 = document.getElementsByClassName('chakra5')[0].textContent
+                                            let chakra_num_6 = document.getElementsByClassName('chakra6')[0].textContent
+                                            let chakra_num_7 = document.getElementsByClassName('chakra7')[0].textContent
+                                            let chakra_num_8 = document.getElementsByClassName('chakra8')[0].textContent
+                                            let chakra_num_9 = document.getElementsByClassName('chakra9')[0].textContent
+                                            let chakra_num_10 = document.getElementsByClassName('chakra10')[0].textContent
+                                            let chakra_num_11 = document.getElementsByClassName('chakra11')[0].textContent
+                                            let chakra_num_12 = document.getElementsByClassName('chakra12')[0].textContent
+                                            let chakra_num_13 = document.getElementsByClassName('chakra13')[0].textContent
+                                            let chakra_num_14 = document.getElementsByClassName('chakra14')[0].textContent
+                                            let chakra_num_15 = document.getElementsByClassName('chakra15')[0].textContent
+                                            let chakra_num_16 = document.getElementsByClassName('chakra16')[0].textContent
+                                            let chakra_num_17 = document.getElementsByClassName('chakra17')[0].textContent
+                                            let chakra_num_18 = document.getElementsByClassName('chakra18')[0].textContent
+                                            let chakra_num_19 = document.getElementsByClassName('chakra19')[0].textContent
+                                            let chakra_num_20 = document.getElementsByClassName('chakra20')[0].textContent
+                                            let chakra_num_21 = document.getElementsByClassName('chakra21')[0].textContent
+                                            let chakra_num_22 = document.getElementsByClassName('chakra22')[0].textContent
+
+                                            document.querySelector(".result-info__item--name_one .result-info__item-content").innerHTML = document.querySelector(".result-info__item--name .result-info__item-content").innerHTML
+                                            document.querySelector(".result-info__item--date_one .result-info__item-content").innerHTML = document.querySelector(".result-info__item--date .result-info__item-content").innerHTML
+                                            document.querySelector(".result-info__item--age_one .result-info__item-content").innerHTML = document.querySelector(".result-info__item--age .result-info__item-content").innerHTML
+
                                             var currentValue = document.getElementsByClassName('fizik1')[0].textContent;
                                             selfTalentsPlus1()
                                             selfTalentsPlus2()
@@ -2919,7 +3224,17 @@
                                             finance2()
                                             finance3()
                                             finance4()
-                                            myFunction()
+                                            money_stream(dima,eblan)
+                                            leftUp2(dima2, eblan2)
+                                            leftUp1(dima2, eblan2)
+                                            rightDown2(chakra_num_5, chakra_num_8)
+                                            rightDown1(chakra_num_8, eblan4)
+                                            leftDown2(chakra_num_9,chakra_num_5)
+                                            leftDown1(chakra_num_9,eblan5)
+                                            rightUp2(chakra_num_7, chakra_num_5)
+                                            rightUp1(chakra_num_7,eblan6)
+
+                                   
                                         }, 100);
 
                                          /* ZOV */
@@ -2929,25 +3244,76 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    let element_to_download = document.querySelector('main');
+                    var opt = {
+                        margin: 10,
+                        filename: 'downloaded_file.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2, width: contentToConvert.scrollWidth },
+                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                        output: 'download',
+                        };
+
+
+                        document.getElementById('downloadButton').addEventListener('click', function() {
+                            // Get the content to be converted to PDF
+                            var contentToConvert = document.body;
+
+                            // Use dom-to-image and jsPDF libraries
+                            domtoimage.toPng(contentToConvert)
+                                .then(function (dataUrl) {
+                                var pdf = new jsPDF('p', 'mm', 'a3');
+                                
+                                // Calculate the aspect ratio
+                                var aspectRatio = pdf.internal.pageSize.width / pdf.internal.pageSize.height;
+
+                                // Calculate the width and height of the image to maintain aspect ratio
+                                var imgWidth = pdf.internal.pageSize.width*2;
+                                var imgHeight = imgWidth / aspectRatio*2;
+
+                                pdf.addImage(dataUrl, 'PNG', 0, 0, imgWidth, imgHeight);
+                                pdf.save('downloaded_file.pdf');
+                                })
+                                .catch(function (error) {
+                                console.error('Error generating PDF:', error);
+                                });
+                            });
+                         
+                </script>
+
+                </div>
+                
+              
+                
             </main>
             <footer class="footer">
                 <div class="wrap_footer footer__wrap">
-                    <div class="footer_title_div">
-                        <h2 class="footer__title">
-                            Больше о нумерологии здесь:
-                        </h2>
+                    <div class="footer_links">
+                        <div class="footer_title_div">
+                            <h2 class="footer__title">
+                                Больше о нумерологии здесь:
+                            </h2>
+                        </div>
+                        <div class="footer__buttons">
+                            <a href="https://instagram.com/" target="_blank" class="footer__button footer__button--insta">
+                                <img src="img/instagram.svg" class="telegram" alt="Ссылка на инстраграм">
+                            </a>
+                            <a href="https://t.me/Elena10107" target="_blank" class="footer__button footer__button--telegram">
+                                <img src="img/telegram.svg" class="instagram" alt="Ссылка на телеграм">
+                            </a>
+                        </div>
                     </div>
-                    <div class="footer__buttons">
-                        <a href="https://instagram.com/" target="_blank" class="footer__button footer__button--insta">
-                            <img src="img/instagram.svg" class="telegram" alt="Ссылка на инстраграм">
-                        </a>
-                        <a href="https://t.me/Elena10107" target="_blank" class="footer__button footer__button--telegram">
-                            <img src="img/telegram.svg" class="instagram" alt="Ссылка на телеграм">
-                        </a>
-                    </div>
+                    <button class="downloadButton" onclick="html2pdf(element_to_download)">Download as PDF</button>
                 </div>
             </footer>
             <style>
+                .footer_links{
+                    display: flex;
+                    margin-right: 16%;
+                }
+
+    
                                     .telegram {
                                         transition: transform 0.3s ease, filter 0.3s ease;
                                         }
@@ -2976,6 +3342,31 @@
                                         /* Эффект при нажатии: более значительное изменение яркости */
                                     .instagram:active {
                                         filter: brightness(1.5);
+                                        }
+
+                                        .downloadButton {
+                                            /*background-color: #ac6d90;*/
+                                            background-color: #744960;
+                                            border-radius: 10px;
+                                            -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+                                            box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+                                            padding: 15px 25px;
+                                            color: #ffffff;
+                                            text-decoration: none;
+                                            -webkit-transition: .3s;
+                                            transition: .3s;
+                                            border: none;
+                                            cursor: pointer;
+                                            margin-bottom: 2px;
+                                        }
+
+                                        .downloadButton:hover {
+                                            opacity: .8
+                                        }
+
+                                        .downloadButton:active {
+                                            -webkit-box-shadow: 0 0 7px 1px rgba(0,0,0,.5) inset;
+                                            box-shadow: 0 0 7px 1px rgba(0,0,0,.5) inset
                                         }
             </style>
             <!-- Yandex.Metrika counter -->
@@ -3009,12 +3400,20 @@
 
             <script>
                 var exports = {};
+
+                
             </script>
+                  
                    <script src="https://unpkg.com/canvg@3.0.1/lib/umd.js"></script>
                    <script src="https://cdn.jsdelivr.net/npm/pdfkit@0.11.0/js/pdfkit.standalone.js"></script>
                    <script src="https://github.com/devongovett/blob-stream/releases/download/v0.1.3/blob-stream.js"></script>
                    <script src="https://cdn.jsdelivr.net/npm/svg-to-pdfkit@0.1.8/source.min.js"></script>
                    <script type="module" src="js/main.min.js"></script>
+                   
+                   <script>
+                       
+           
+                  </script>
         </div>
     </body>
 </html>
