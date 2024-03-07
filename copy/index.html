@@ -1251,13 +1251,7 @@
                                       </div>
                                     </div>
                                     <script>
-                                        
-
-                                        let openButtons = [];
-                                        setTimeout(() => {  console.log(document.getElementsByClassName('chakra4')[0].textContent); }, 5000);
-                                        function toggleText(index) {
-                                          
-                                          function returnDate(date) {
+                                        function returnDate(date) {
                                               let digitsArray = date.replace(/\D/g, '').split('').map(Number);
                                               return digitsArray[0]
                                           }
@@ -1285,7 +1279,10 @@
                                               }
                                               return sum;
                                           }
-                                    
+
+                                        let openButtons = [];
+
+                                        function toggleText(index) {
                                           let textContent = document.getElementById('text' + index);
                                     
                                           if (openButtons.includes(index)) {
@@ -3244,43 +3241,7 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    let element_to_download = document.querySelector('main');
-                    var opt = {
-                        margin: 10,
-                        filename: 'downloaded_file.pdf',
-                        image: { type: 'jpeg', quality: 0.98 },
-                        html2canvas: { scale: 2, width: contentToConvert.scrollWidth },
-                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                        output: 'download',
-                        };
-
-
-                        document.getElementById('downloadButton').addEventListener('click', function() {
-                            // Get the content to be converted to PDF
-                            var contentToConvert = document.body;
-
-                            // Use dom-to-image and jsPDF libraries
-                            domtoimage.toPng(contentToConvert)
-                                .then(function (dataUrl) {
-                                var pdf = new jsPDF('p', 'mm', 'a3');
-                                
-                                // Calculate the aspect ratio
-                                var aspectRatio = pdf.internal.pageSize.width / pdf.internal.pageSize.height;
-
-                                // Calculate the width and height of the image to maintain aspect ratio
-                                var imgWidth = pdf.internal.pageSize.width*2;
-                                var imgHeight = imgWidth / aspectRatio*2;
-
-                                pdf.addImage(dataUrl, 'PNG', 0, 0, imgWidth, imgHeight);
-                                pdf.save('downloaded_file.pdf');
-                                })
-                                .catch(function (error) {
-                                console.error('Error generating PDF:', error);
-                                });
-                            });
-                         
-                </script>
+                
 
                 </div>
                 
@@ -3304,9 +3265,39 @@
                             </a>
                         </div>
                     </div>
-                    <button class="downloadButton" onclick="html2pdf(element_to_download)">Download as PDF</button>
+                    <button class="downloadButton" onclick="saveAsPDF()" >Download as PDF</button>
+                   
                 </div>
             </footer>
+            <script>
+                let element_to_download = document.querySelector('main');
+               
+                        function saveAsPDF() {
+                            toggleText(1)
+                            toggleText(2)
+                            toggleText(3)
+                            toggleText(4)
+                            toggleText(5)
+                            toggleText(6)
+                            toggleText(7)
+                            // Получаем HTML-код всей страницы
+                            const htmlContent = document.documentElement.outerHTML;
+
+                            // Опции для конвертации в PDF
+                            const pdfOptions = {
+                                margin: 0,
+                                filename: 'website.pdf',
+                                image: { type: 'jpeg', quality: 0.98 },
+                                html2canvas: { scale: 2 },
+                                jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' }
+                            };
+
+                            // Используем html2pdf для создания PDF
+                            html2pdf().from(htmlContent).set(pdfOptions).save();
+                        }
+
+                     
+            </script>
             <style>
                 .footer_links{
                     display: flex;
