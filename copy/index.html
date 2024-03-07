@@ -3280,10 +3280,10 @@
                             toggleText(5)
                             toggleText(6)
                             toggleText(7)
-                            // Получаем HTML-код всей страницы
+                            // Вся страница получена
                             const htmlContent = document.documentElement.outerHTML;
 
-                            // Опции для конвертации в PDF
+            
                             const pdfOptions = {
                                 margin: 0,
                                 filename: 'website.pdf',
@@ -3292,7 +3292,7 @@
                                 jsPDF: { unit: 'mm', format: 'a3', orientation: 'portrait' }
                             };
 
-                            // Используем html2pdf для создания PDF
+    
                             html2pdf().from(htmlContent).set(pdfOptions).save();
                         }
 
